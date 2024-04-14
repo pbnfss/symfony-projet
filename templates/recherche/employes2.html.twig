@@ -1,0 +1,31 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Liste des formations{% endblock %}
+
+{% block body %}
+    <h1>Liste des Inscriptions</h1>
+
+    {% if ensInscription is not empty %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Durée</th>
+                <th>Département</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for inscription in ensInscription %}
+                <tr>
+                    <td>{{ inscription.formation.id }}</td>
+                    <td>{{ inscription.formation.nbHeures }}</td>
+                    <td>{{ inscription.formation.departement }}</td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucun employé trouvé.</p>
+    {% endif %}
+{% endblock %}

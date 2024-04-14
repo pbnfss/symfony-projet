@@ -1,0 +1,33 @@
+{% extends 'baseConnected.html.twig' %}
+
+{% block body %}
+
+    <div class="form-group" style="text-align: center; font-family: 'Arial Rounded MT Bold'; padding-right: 100px; padding-left: 100px">
+
+    <h1>Liste des Formations</h1><br>
+
+        <table class="table" style="border-collapse: collapse;width: 100%;border: 1px solid #ddd;">
+            <thead>
+            <tr>
+                <th style="border: 1px solid #ddd;padding: 8px;text-align: center;">Date de début</th>
+                <th style="border: 1px solid #ddd;padding: 8px;text-align: center;">Nombre d'heures</th>
+                <th style="border: 1px solid #ddd;padding: 8px;text-align: center;">Département</th>
+                <th style="border: 1px solid #ddd;padding: 8px;text-align: center;">Produit</th>
+                <th style="border: 1px solid #ddd;padding: 8px;text-align: center;">Inscription</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for formation in lesFormations %}
+                <tr>
+                    <td style="border: 1px solid #ddd;padding: 5px;text-align: center;">{{ formation.dateDebut|date('d-m-Y') }}</td>
+                    <td style="border: 1px solid #ddd;padding: 5px;text-align: center;">{{ formation.nbHeures }}</td>
+                    <td style="border: 1px solid #ddd;padding: 5px;text-align: center;">{{ formation.departement }}</td>
+                    <td style="border: 1px solid #ddd;padding: 5px;text-align: center;">{{ formation.produit.libelle }}</td>
+                    <td style="border: 1px solid #ddd;padding: 5px;text-align: center;"><a class = "btn btn-outline-success me-2" href="{{ path('app_inscriptionEmp', {'id': formation.id}) }}">S'inscrire</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

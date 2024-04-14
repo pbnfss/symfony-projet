@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="form-group" style="padding-left:400px; padding-right:400px; padding-top:30px; font-size:25px; text-align: center; font-family: 'Arial Rounded MT Bold'">
+
+        {{ form_row(form.login, {'attr': {'class': 'form-control', 'placeholder': 'Obligatoire', 'aria-label': 'login'}}) }}<br>
+        {{ form_row(form.mdp, {'attr': {'class': 'form-control', 'placeholder': 'obligatoire', 'aria-label': 'mdp'}}) }}<br>
+        {{ form_widget(form.Connexion, {'attr': {'class': 'btn btn-dark'}}) }}
+
+    </div>
+    {{ form_end(form) }}
+
+
+{% endblock %}

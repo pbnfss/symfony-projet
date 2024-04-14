@@ -1,0 +1,31 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Liste des formations{% endblock %}
+
+{% block body %}
+    <h1>Liste des employés</h1>
+
+    {% if ensEmploye is not empty %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Statut</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for employe in ensEmploye %}
+                <tr>
+                    <td>{{ employe.nom }}</td>
+                    <td>{{ employe.prenom }}</td>
+                    <td>{{ employe.statut }}</td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucun employé trouvé.</p>
+    {% endif %}
+{% endblock %}

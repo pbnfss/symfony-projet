@@ -1,0 +1,18 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Liste des formations{% endblock %}
+
+{% block body %}
+    <h1>Liste des formations de l'employé</h1>
+
+    {{ form_start(form) }}
+    <div class="form-group" style="text-align: center;padding-left:400px; padding-right:400px; padding-top:30px; font-size:25px; font-family: 'Arial Rounded MT Bold'">
+
+        {{ form_row(form.nom, {'attr': {'class': 'form-control', 'placeholder': 'Obligatoire'}}) }}<br>
+        {{ form_row(form.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Obligatoire'}}) }}<br>
+        {{ form_widget(form.rechercher, {'attr': {'class': 'btn btn-dark'}}) }}
+
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}

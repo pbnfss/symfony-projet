@@ -1,0 +1,17 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% form_theme form 'form_table_layout.html.twig' %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+    <div class="form-group" style="padding-left:400px; padding-right:400px; padding-top:30px; font-size:25px; text-align: center; font-family: 'Arial Rounded MT Bold'">
+        {{ form_row(form.dateDebut, {'class': 'form-control', 'placeholder': 'date()', 'aria-label': 'Date de début'}) }}<br>
+        {{ form_row(form.nbHeures, {'attr': {'class': 'form-control', 'placeholder': 'obligatoire', 'aria-label': 'Nombre heures'}}) }}<br>
+        {{ form_row(form.departement, {'attr': {'class': 'form-control', 'placeholder': 'obligatoire', 'aria-label': 'Nombre heures'}}) }}<br>
+        {{ form_row(form.produit, {'attr': {'class': 'form-control', 'placeholder': 'obligatoire', 'aria-label': 'produit'}}) }}<br>
+        {{ form_widget(form.Ajouter, {'attr': {'class': 'btn btn-dark'}}) }}     {{ form_widget(form.Annuler, {'attr': {'class': 'btn btn-dark'}}) }}
+    </div><br>
+    {{ form_end(form) }}
+
+{% endblock %}
