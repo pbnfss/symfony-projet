@@ -36,7 +36,7 @@ Mot de passe : 1234
 Login : Bonnefis
 
 Mot de passe : 1234
-------------------------------
+
 Login : tbo
 
 Mot de passe : 1234
