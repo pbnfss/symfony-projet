@@ -40,3 +40,7 @@ Mot de passe : 1234
 Login : tbo
 
 Mot de passe : 1234
+
+## Base de donnée
+
+La base de donnée nommée projetsymfony(2) se trouve dans le repository. Ne pas oublier de la télécharger pour avoir le projet fonctionnel en local
